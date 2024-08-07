@@ -6,7 +6,7 @@ from openxlab.model import download
 
 base_path = './internlm2-1.8B'
 os.system(f'mkdir {base_path}')
-os.system(f'git clone https://code.openxlab.org.cn/jyf2100/internlm2-1.8B.git {base_path}')
+os.system(f'git clone https://www.modelscope.cn/Shanghai_AI_Laboratory/internlm2-1_8b.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
 tokenizer = AutoTokenizer.from_pretrained(base_path,trust_remote_code=True)
