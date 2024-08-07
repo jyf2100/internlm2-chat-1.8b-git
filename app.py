@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 from openxlab.model import download
 
 base_path = './internlm2-1.8B'
-os.system(f'mkdir {base_path'}
+os.system(f'mkdir {base_path}')
 os.system(f'git git clone https://code.openxlab.org.cn/jyf2100/internlm2-1.8B.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
