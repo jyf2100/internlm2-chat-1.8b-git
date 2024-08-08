@@ -4,9 +4,9 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 from openxlab.model import download
 
-base_path = os.path.abspath(".")+"/internlm2-1.8B"
+base_path = os.path.abspath(".")+"/streamer-sales-lelemiao"
 os.system(f'mkdir -p {base_path}')
-os.system(f'git clone https://www.modelscope.cn/Shanghai_AI_Laboratory/internlm2-1_8b.git {base_path}')
+os.system(f'git clone https://www.modelscope.cn/HinGwenWoong/streamer-sales-lelemiao-7b-4bit.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
 tokenizer = AutoTokenizer.from_pretrained(base_path,trust_remote_code=True)
@@ -17,7 +17,7 @@ def chat(message,history):
         yield response
 
 gr.ChatInterface(chat,
-                 title="InternLM2-Chat-1.8B",
+                 title="streamer-sales-lelemiao",
                 description="""
 InternLM is mainly developed by Shanghai AI Laboratory.  
                  """,
