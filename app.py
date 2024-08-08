@@ -4,8 +4,8 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 from openxlab.model import download
 
-base_path = './internlm2-1.8B'
-os.system(f'mkdir {base_path}')
+base_path = os.path.abspath(".")+"/internlm2-1.8B"
+os.system(f'mkdir -p {base_path}')
 os.system(f'git clone https://www.modelscope.cn/Shanghai_AI_Laboratory/internlm2-1_8b.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
